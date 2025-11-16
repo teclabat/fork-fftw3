@@ -1,3 +1,19 @@
+In fact this is not a fork from the official fftw3 repository
+(https://github.com/FFTW/fftw3) rather than the official release
+download from here: https://www.fftw.org/download.html
+The advantage is that you don't need the ocaml and ocamlbuild tools
+and immediately start to compile and codelets are already there.
+ocaml is ready available for msys2, but ocamlbuild is not,
+so that's also a reason.
+
+I am running the build this way:
+./configure --with-our-malloc16 --with-windows-f77-mangling --enable-shared
+ --enable-threads --with-combined-threads --enable-sse2
+make
+make install
+
+------------------------------------------------------------------
+
 FFTW is a free collection of fast C routines for computing the
 Discrete Fourier Transform in one or more dimensions.  It includes
 complex, real, symmetric, and parallel transforms, and can handle
